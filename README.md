@@ -9,8 +9,10 @@ Other things to include:
 
 **Screenshot**: 
 
-![]()
-
+<div style="display:flex">
+<img src="https://github.com/JYWTom/singcon/blob/main/public/screenshot.png?raw=true" style="width:300px" />
+<img src="https://github.com/JYWTom/singcon/blob/main/public/screenshot_light.png?raw=true" style="width:300px" />
+</div>
 
 ## Dependencies
 
