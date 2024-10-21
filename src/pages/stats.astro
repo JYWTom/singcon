@@ -1,0 +1,9 @@
+---
+import Layout from "../layouts/Layout.astro";
+import StatsText from "../components/Stats.svelte";
+export const prerender = true;
+---
+
+<Layout title="Redirect - Inter-House Singing Contest">
+  <StatsText client:only="svelte" />
+</Layout>

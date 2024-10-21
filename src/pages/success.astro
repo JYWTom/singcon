@@ -1,0 +1,9 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SuccessText from "../components/Success.svelte";
+export const prerender = true;
+---
+
+<Layout title="Success - Inter-House Singing Contest">
+  <SuccessText client:only="svelte" />
+</Layout>

@@ -1,0 +1,32 @@
+---
+import FourHouses from "../components/FourHouses.astro";
+import Form from "../components/Form.astro";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
+export const prerender = true;
+---
+
+<Layout title="Vote - Inter-House Singing Contest">
+  <ViewTransitions slot="header" />
+  <div class="flex-column min-h-screen">
+    <div class={"pt-10"}>
+      <h1
+        class={"text-center font-bold sm:text-4xl text-2xl dark:text-[#F8F8F2]"}
+      >
+        Inter-House Singing Contest
+      </h1>
+    </div>
+
+    <div class={"p-2 lg:px-28 pt-5 mb-auto"}>
+      <FourHouses />
+      <div class={"mx-auto sm:p-3 pt-3"}>
+        <div>
+          <Form />
+        </div>
+      </div>
+    </div>
+    <footer class="pb-4 text-center mt-3"></footer>
+  </div>
+</Layout>
+<Footer />

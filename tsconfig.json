@@ -1,0 +1,11 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "exclude": ["dist/*", ".sveltekit/*"],
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
+  }
+}

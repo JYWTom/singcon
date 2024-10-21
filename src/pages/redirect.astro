@@ -1,0 +1,9 @@
+---
+import Layout from "../layouts/Layout.astro";
+import RedirectText from "../components/Redirect.svelte";
+export const prerender = true;
+---
+
+<Layout title="Redirect - Inter-House Singing Contest">
+  <RedirectText client:only="svelte" />
+</Layout>

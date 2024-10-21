@@ -1,0 +1,38 @@
+---
+import SignIn from "../components/SignIn.svelte";
+import FourHouses from "../components/FourHouses.astro";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Alert from "../components/Alert.svelte";
+import { ViewTransitions } from "astro:transitions";
+export const prerender = true;
+---
+
+<Layout title="Inter-House Singing Contest">
+  <ViewTransitions slot="header" />
+  <main
+    class="supports-[height:100cqh]:h-[100cqh] supports-[height:100svh]:h-[100svh]"
+  >
+    <div class="flex-column">
+      <div class={"pt-10"}>
+        <h1
+          class={"text-center font-bold sm:text-4xl text-2xl dark:text-[#F8F8F2]"}
+        >
+          Inter-House Singing Contest
+        </h1>
+      </div>
+
+      <div class={"p-2 lg:px-28 pt-5 mb-auto"}>
+        <FourHouses />
+        <div class={"mx-auto pt-3 max-w-2xl"}>
+          <SignIn client:load />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+<Footer>
+  <Alert />
+</Footer>
+
+<style></style>

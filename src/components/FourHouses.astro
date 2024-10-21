@@ -1,0 +1,78 @@
+---
+const cdn: string = import.meta.env.PUBLIC_CDN;
+---
+
+<div
+  class={"grid grid-cols-4 gap-x-2 max-w-3xl md:gap-x-1 md:mx-30 mx-auto"}
+  transition:persist
+>
+  <div class="relative sm:max-h-40 aspect-square">
+    <img
+      data-spai-src="/Red.jpg"
+      alt="Red House Icon"
+      height="200"
+      width="200"
+      class="rounded-lg"
+      src={cdn + "/client/w_300,h_300,q_lqip,ret_img/singcon.jywtom.me/Red.jpg"}
+    />
+  </div>
+  <div class="relative sm:max-h-40 aspect-square">
+    <img
+      data-spai-src="/Yellow.jpg"
+      alt="Yellow House Icon"
+      height="200"
+      width="200"
+      class="rounded-lg"
+      src={cdn +
+        "/client/w_300,h_300,q_lqip,ret_img/singcon.jywtom.me/Yellow.jpg"}
+    />
+  </div>
+  <div class="relative sm:max-h-40 aspect-square">
+    <img
+      data-spai-src="/Blue.jpg"
+      alt="Blue House Icon"
+      height="200"
+      width="200"
+      class="rounded-lg"
+      src={cdn +
+        "/client/w_300,h_300,q_lqip,ret_img/singcon.jywtom.me/Blue.jpg"}
+    />
+  </div>
+  <div class="relative sm:max-h-40 aspect-square">
+    <img
+      data-spai-src="/Green.jpg"
+      alt="Green House Icon"
+      height="200"
+      width="200"
+      class="rounded-lg"
+      src={cdn +
+        "/client/w_300,h_300,q_lqip,ret_img/singcon.jywtom.me/Green.jpg"}
+    />
+  </div>
+</div>
+<script is:inline>
+  (function (w, d) {
+    let b = d.getElementsByTagName("head")[0];
+    let s = d.createElement("script");
+    let v = "IntersectionObserver" in w ? "" : "-compat";
+    s.async = true; // This includes the script as async.
+    s.src = cdn + "/assets/js/bundles/spai-lib" + v + ".1.1.min.js";
+    w.spaiDomain = "img.jywtom.me";
+    w.spaiData = {
+      key: "client",
+      quality: "lossy",
+      doSelectors: [
+        {
+          //img is the default one, you need to define it if you define doSelectors, otherwise it's active by default
+          selectors: ["img"],
+          origAttr: "data-spai-src",
+          targetAttr: "src",
+          lazy: false,
+          lqip: false,
+        },
+      ], // can be lossy, glossy or lossless
+      sizeFromImageSuffix: true, //deactivate this if you have images that end in, for example: "-100x100.jpg", but the numbers don't mean the pixels width or height of the image
+    };
+    b.appendChild(s);
+  })(window, document);
+</script>
